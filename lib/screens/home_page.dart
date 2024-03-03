@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home_ui/utils/app_colors.dart';
 import 'package:smart_home_ui/widgets/home_page_widgets/list_items_widgets.dart';
+import 'package:smart_home_ui/widgets/home_page_widgets/quick_access_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -48,7 +49,12 @@ class _HomePageState extends State<HomePage> {
       ),
       body: const SingleChildScrollView(
         child: Column(
-          children: [SizedBox(height: 10), ListItemsWidgets()],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 10),
+            ListItemsWidgets(),
+            QuickAccessWidget()
+          ],
         ),
       ),
     );

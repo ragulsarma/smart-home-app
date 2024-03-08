@@ -20,16 +20,21 @@ class _PetHomePageState extends State<PetHomePage> {
         centerTitle: true,
         leading: Padding(
           padding: const EdgeInsets.only(left: 16.0),
-          child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(13))),
-              child: const Icon(
-                Icons.arrow_back_ios_new,
-                color: AppColors.primaryColor,
-                size: 20,
-              )),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(13))),
+                child: const Icon(
+                  Icons.arrow_back_ios_new,
+                  color: AppColors.primaryColor,
+                  size: 20,
+                )),
+          ),
         ),
         title: Container(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),

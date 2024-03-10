@@ -27,7 +27,8 @@ class _PetCamViewWidgetState extends State<PetCamViewWidget> {
         children: [
           topButtonsWidget(),
           Positioned(bottom: 70, right: 0, child: cameraStatusWidget()),
-          Expanded(child: bottomRowIcons()),
+          // Spacer(),
+          bottomRowIcons(),
           const SizedBox(height: 10)
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home_ui/utils/app_colors.dart';
+import 'package:smart_home_ui/widgets/pet_page_widgets/bottom_button_widget.dart';
 import 'package:smart_home_ui/widgets/pet_page_widgets/pet_cam_view_widget.dart';
 
 class PetHomePage extends StatefulWidget {
@@ -77,7 +78,7 @@ class _PetHomePageState extends State<PetHomePage> {
         ],
       ),
       body: const Column(
-        children: [PetCamViewWidget()],
+        children: [PetCamViewWidget(), BottomButtonWidget()],
       ),
     );
   }

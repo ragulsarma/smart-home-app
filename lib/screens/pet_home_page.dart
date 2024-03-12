@@ -70,7 +70,10 @@ class _PetHomePageState extends State<PetHomePage> {
               const SizedBox(width: 16)
             ]),
         body: const Column(
-          children: [PetCamViewWidget(), BottomButtonWidget()],
+          children: [PetCamViewWidget(), BottomButtonWidget(
+            title: 'Update Pet Footer',
+            showSubTitle: true,
+          )],
         ));
   }
 }

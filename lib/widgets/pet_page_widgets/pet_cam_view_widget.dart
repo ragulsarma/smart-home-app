@@ -13,26 +13,23 @@ class _PetCamViewWidgetState extends State<PetCamViewWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-      padding: const EdgeInsets.fromLTRB(16, 5, 16, 15),
-      decoration: const BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(
-            image: AssetImage("assets/images/cat_image.png"),
-            fit: BoxFit.cover,
-          ),
-          borderRadius: BorderRadius.all(Radius.circular(15))),
-      child: Stack(
-        children: [
+        height: 300,
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        padding: const EdgeInsets.fromLTRB(16, 5, 16, 15),
+        decoration: const BoxDecoration(
+            color: Colors.white,
+            image: DecorationImage(
+              image: AssetImage("assets/images/cat_image.png"),
+              fit: BoxFit.cover,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(15))),
+        child: Stack(children: [
           topButtonsWidget(),
           Positioned(bottom: 70, right: 0, child: cameraStatusWidget()),
           // Spacer(),
           bottomRowIcons(),
           const SizedBox(height: 10)
-        ],
-      ),
-    );
+        ]));
   }
 
   Widget bottomRowIcons() {

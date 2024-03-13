@@ -51,7 +51,7 @@ class _BottomButtonWidgetState extends State<BottomButtonWidget> {
             children: [
               Text(
                 widget.title,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
               if (widget.showSubTitle) ...[
                 const SizedBox(width: 3),

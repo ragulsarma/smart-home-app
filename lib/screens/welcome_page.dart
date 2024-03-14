@@ -17,7 +17,7 @@ class _WelcomePageState extends State<WelcomePage> {
         body: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
           Container(
               // height: 250,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               // margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               decoration: const BoxDecoration(
                 color: Colors.white,

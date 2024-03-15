@@ -31,19 +31,17 @@ class _QuickAccessWidgetState extends State<QuickAccessWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const SizedBox(height: 20),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
-          child: Text(
-            'Quick Access',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          ),
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      const SizedBox(height: 20),
+      const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        child: Text(
+          'Quick Access',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
-        const SizedBox(height: 15),
-        SizedBox(
+      ),
+      const SizedBox(height: 15),
+      SizedBox(
           height: 150,
           child: ListView.builder(
               itemCount: accessList.length,
@@ -51,70 +49,66 @@ class _QuickAccessWidgetState extends State<QuickAccessWidget> {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const PetHomePage()));
-                  },
-                  child: Container(
-                    // height: 100,
-                    // width: 150,
-                    padding: const EdgeInsets.only(left: 16.0, right: 40),
-                    margin: const EdgeInsets.only(left: 16.0),
-                    decoration: BoxDecoration(
-                        color: accessList[index].bgColor,
-                        gradient: index == 0
-                            ? const LinearGradient(
-                                colors: [
-                                  Color(0xFF3c70d8),
-                                  Color(0xFF6393f4),
-                                ],
-                                begin: FractionalOffset(0.0, 0.0),
-                                end: FractionalOffset(1.0, 0.0),
-                                stops: [0.0, 1.0],
-                                tileMode: TileMode.clamp)
-                            : null,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(20))),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 15),
-                        Transform.scale(
-                          scale: .9,
-                          child: CupertinoSwitch(
-                              value: accessList[index].enableButton,
-                              activeColor: const Color(0XFF7197e3),
-                              thumbColor:
-                                  index == 1 ? AppColors.primaryColor : null,
-                              onChanged: (value) {}),
-                        ),
-                        const SizedBox(height: 30),
-                        Text(
-                          accessList[index].dec,
-                          style: TextStyle(
-                              color: index == 0
-                                  ? Colors.white.withOpacity(0.3)
-                                  : Colors.black.withOpacity(0.3)),
-                        ),
-                        const SizedBox(height: 3),
-                        Text(
-                          accessList[index].name,
-                          style: TextStyle(
-                              color: index == 0
-                                  ? Colors.white
-                                  : AppColors.primaryColor,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              }),
-        ),
-      ],
-    );
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PetHomePage()));
+                    },
+                    child: Container(
+                        // height: 100,
+                        // width: 150,
+                        padding: const EdgeInsets.only(left: 16.0, right: 40),
+                        margin: const EdgeInsets.only(left: 16.0),
+                        decoration: BoxDecoration(
+                            color: accessList[index].bgColor,
+                            gradient: index == 0
+                                ? const LinearGradient(
+                                    colors: [
+                                      Color(0xFF3c70d8),
+                                      Color(0xFF6393f4),
+                                    ],
+                                    begin: FractionalOffset(0.0, 0.0),
+                                    end: FractionalOffset(1.0, 0.0),
+                                    stops: [0.0, 1.0],
+                                    tileMode: TileMode.clamp)
+                                : null,
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(20))),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(height: 15),
+                              Transform.scale(
+                                scale: .9,
+                                child: CupertinoSwitch(
+                                    value: accessList[index].enableButton,
+                                    activeColor: const Color(0XFF7197e3),
+                                    thumbColor: index == 1
+                                        ? AppColors.primaryColor
+                                        : null,
+                                    onChanged: (value) {}),
+                              ),
+                              const SizedBox(height: 30),
+                              Text(
+                                accessList[index].dec,
+                                style: TextStyle(
+                                    color: index == 0
+                                        ? Colors.white.withOpacity(0.3)
+                                        : Colors.black.withOpacity(0.3)),
+                              ),
+                              const SizedBox(height: 3),
+                              Text(
+                                accessList[index].name,
+                                style: TextStyle(
+                                    color: index == 0
+                                        ? Colors.white
+                                        : AppColors.primaryColor,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 16),
+                              )
+                            ])));
+              }))
+    ]);
   }
 }

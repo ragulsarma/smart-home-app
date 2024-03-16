@@ -26,23 +26,23 @@ class _BottomButtonWidgetState extends State<BottomButtonWidget> {
             color: AppColors.primaryColor,
             borderRadius: BorderRadius.all(Radius.circular(35))),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              // height: 50,
-              // width: 50,
-              decoration: const BoxDecoration(
-                color: AppColors.primaryColor,
-                shape: BoxShape.circle,
-                // borderRadius: BorderRadius.all(Radius.circular(35))
-              ),
-              child: const Icon(
-                Icons.arrow_circle_right_sharp,
-                color: Colors.red,
-                size: 60,
-              ),
-            ),
-          ),
+          // Align(
+          //   alignment: Alignment.centerLeft,
+          //   child: Container(
+          //     // height: 50,
+          //     // width: 50,
+          //     decoration: const BoxDecoration(
+          //       color: AppColors.primaryColor,
+          //       shape: BoxShape.circle,
+          //       // borderRadius: BorderRadius.all(Radius.circular(35))
+          //     ),
+          //     child: const Icon(
+          //       Icons.arrow_circle_right_sharp,
+          //       color: Colors.red,
+          //       size: 60,
+          //     ),
+          //   ),
+          // ),
           const SizedBox(width: 5),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text(

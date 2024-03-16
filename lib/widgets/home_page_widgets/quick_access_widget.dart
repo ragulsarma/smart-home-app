@@ -26,7 +26,7 @@ class _QuickAccessWidgetState extends State<QuickAccessWidget> {
       enableGradient: false,
       enableButton: false,
       bgColor: Colors.white,
-    ),
+    )
   ];
 
   @override
@@ -34,12 +34,9 @@ class _QuickAccessWidgetState extends State<QuickAccessWidget> {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const SizedBox(height: 20),
       const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
-        child: Text(
-          'Quick Access',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-        ),
-      ),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
+          child: Text('Quick Access',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),
       const SizedBox(height: 15),
       SizedBox(
           height: 150,

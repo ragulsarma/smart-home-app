@@ -23,14 +23,13 @@ class _WelcomePageState extends State<WelcomePage> {
               Expanded(
                 child: Stack(
                   children: [
-
                     Container(
                       // height: 100,
                       // width: 150,
                       // padding: const EdgeInsets.only(left: 16.0, right: 40),
                       // margin: const EdgeInsets.only(left: 16.0),
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(
+                      decoration: const BoxDecoration(
+                          gradient: LinearGradient(
                               colors: [
                                 // Color(0xFF2b2b33),
                                 // Color(0xFF2d3882),
@@ -42,26 +41,25 @@ class _WelcomePageState extends State<WelcomePage> {
                               end: FractionalOffset(1.0, 0.0),
                               stops: [0.0, 1.0],
                               tileMode: TileMode.clamp),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(20))),
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
                     ),
                     Container(
-                      // height: 350,
-                      // padding: const EdgeInsets.symmetric(
-                      //     horizontal: 20, vertical: 15),
-                      margin: EdgeInsets.only(top: 35),
-                      decoration: const BoxDecoration(
-                        color: Colors.white,
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/welcome_image.jpeg"),
-                          // fit: BoxFit.cover,
-                        ),
-                        shape: BoxShape.circle,
-                        // borderRadius: BorderRadius.only(
-                        //     topLeft: Radius.circular(30),
-                        //     topRight: Radius.circular(30))
-                      ),
-                    ),
+                        // height: 350,
+                        // padding: const EdgeInsets.symmetric(
+                        //     horizontal: 20, vertical: 15),
+                        margin: const EdgeInsets.only(top: 35),
+                        decoration: const BoxDecoration(
+                            color: Colors.white,
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  "assets/images/welcome_image.jpeg"),
+                              // fit: BoxFit.cover,
+                            ),
+                            shape: BoxShape.circle
+                            // borderRadius: BorderRadius.only(
+                            //     topLeft: Radius.circular(30),
+                            //     topRight: Radius.circular(30))
+                            )),
                     /*CustomPaint(
                       size: Size(200, 200),
                       painter: CirclePainter(),
@@ -84,14 +82,12 @@ class _WelcomePageState extends State<WelcomePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(height: 15),
-                        Text(
-                          'Control your home in one Place',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 35,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                        Text('Control your home in one Place',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 35,
+                              fontWeight: FontWeight.w600,
+                            )),
                         SizedBox(height: 15),
                         Text(
                             'A smart home with advanced features that you can control from a mobile application',
@@ -99,9 +95,7 @@ class _WelcomePageState extends State<WelcomePage> {
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.w400)),
                         SizedBox(height: 30),
-                        BottomButtonWidget(
-                          title: 'Get started',
-                        ),
+                        BottomButtonWidget(title: 'Get started'),
                         SizedBox(height: 25)
                       ]))
             ]));
